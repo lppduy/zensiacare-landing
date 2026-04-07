@@ -44,13 +44,13 @@ export function TreatmentsSection() {
     <section id="treatments" className="py-20 lg:py-28 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="text-center mb-16">
-          <span className="text-sm font-semibold text-[#0F766E] uppercase tracking-widest">
+          <span className="text-sm font-semibold text-[#2563EB] uppercase tracking-widest">
             Procedures
           </span>
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mt-3 mb-4">
             Our Specialized Procedures
           </h2>
-          <div className="w-16 h-1 bg-[#0F766E] rounded-full mx-auto" />
+          <div className="w-16 h-1 bg-[#2563EB] rounded-full mx-auto" />
           <p className="text-gray-500 mt-4">
             We focus on high-demand, high-success treatments.
           </p>
@@ -67,12 +67,12 @@ export function TreatmentsSection() {
                 <ul className="space-y-1 mb-4 flex-1">
                   {procedures.map((p) => (
                     <li key={p} className="text-sm text-[#0F172A]/70 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#0F766E] flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] flex-shrink-0" />
                       {p}
                     </li>
                   ))}
                 </ul>
-                <p className="text-xs text-[#0F766E] font-medium italic border-t border-[#0F766E]/20 pt-3">
+                <p className="text-xs text-[#2563EB] font-medium italic border-t border-[#2563EB]/20 pt-3">
                   {value}
                 </p>
               </div>

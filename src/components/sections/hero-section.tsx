@@ -41,7 +41,7 @@ function QuoteFormCard() {
       className="bg-white rounded-2xl shadow-2xl overflow-hidden"
     >
       {/* Blue top bar */}
-      <div className="h-1.5 bg-[#0F766E]" />
+      <div className="h-1.5 bg-[#2563EB]" />
 
       <div className="p-8">
         <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-1 text-center">
@@ -61,7 +61,7 @@ function QuoteFormCard() {
               type="text"
               required
               placeholder="John Doe"
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] placeholder:text-gray-400 focus:outline-none focus:border-[#0F766E] focus:ring-2 focus:ring-[#0F766E]/10 transition-all"
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] placeholder:text-gray-400 focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/10 transition-all"
             />
           </div>
 
@@ -74,7 +74,7 @@ function QuoteFormCard() {
               type="text"
               required
               placeholder="e.g. Australia"
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] placeholder:text-gray-400 focus:outline-none focus:border-[#0F766E] focus:ring-2 focus:ring-[#0F766E]/10 transition-all"
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] placeholder:text-gray-400 focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/10 transition-all"
             />
           </div>
 
@@ -87,7 +87,7 @@ function QuoteFormCard() {
               <select
                 required
                 defaultValue=""
-                className="w-full appearance-none border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:border-[#0F766E] focus:ring-2 focus:ring-[#0F766E]/10 transition-all cursor-pointer bg-white"
+                className="w-full appearance-none border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/10 transition-all cursor-pointer bg-white"
               >
                 <option value="" disabled>Select treatment...</option>
                 {TREATMENTS.map((t) => (
@@ -101,7 +101,7 @@ function QuoteFormCard() {
           {/* Submit */}
           <button
             type="submit"
-            className="w-full bg-[#D97706] hover:bg-[#B45309] text-white font-bold rounded-xl py-4 text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-lg shadow-[#0F766E]/25 mt-2"
+            className="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold rounded-2xl py-4 text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-lg shadow-[#2563EB]/30 mt-2 hover:shadow-xl"
           >
             Get Free Quote
             <ArrowRight size={16} />
@@ -120,10 +120,10 @@ function QuoteFormCard() {
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-[#F0FDFA] via-white to-[#F0FDF9] flex items-center pt-20 pb-16 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-[#F0F7FF] via-white to-[#EFF6FF] flex items-center pt-20 pb-16 overflow-hidden">
       {/* Subtle background circles */}
-      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#0F766E]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#0F766E]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -135,7 +135,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-[#0F766E]/10 border border-[#0F766E]/20 text-[#0F766E] px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 bg-[#2563EB]/10 border border-[#2563EB]/20 text-[#2563EB] px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
               <Shield size={14} />
               <span>Your Trusted Medical Guardian in Vietnam</span>
@@ -149,7 +149,7 @@ export function HeroSection() {
               className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold text-[#0F172A] leading-[1.05] mb-6"
             >
               Your Premier{' '}
-              <span className="text-[#0F766E]">Medical Guardian</span>
+              <span className="text-[#2563EB]">Medical Guardian</span>
               {' '}in Vietnam
             </motion.h1>
 
@@ -161,7 +161,7 @@ export function HeroSection() {
               className="text-lg text-gray-600 leading-relaxed mb-10 max-w-lg"
             >
               Save up to{' '}
-              <span className="text-[#0F766E] font-semibold">70% on treatment</span>
+              <span className="text-[#2563EB] font-semibold">70% on treatment</span>
               {' '}— safely guided by experts who match you with world-class JCI accredited hospitals.
             </motion.p>
 
@@ -177,7 +177,7 @@ export function HeroSection() {
                 {AVATARS.map((initials, i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-[#0F766E] to-[#115E59] border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-sm"
+                    className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2563EB] to-[#1D4ED8] border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-sm"
                   >
                     {initials}
                   </div>

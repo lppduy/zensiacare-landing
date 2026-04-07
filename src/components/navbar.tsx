@@ -38,7 +38,7 @@ export function Navbar() {
                 scrolled ? 'text-gray-900' : 'text-white'
               }`}
             >
-              Zensia<span className="text-[#0F766E]">Care</span>
+              Zensia<span className="text-[#2563EB]">Care</span>
             </span>
           </a>
 
@@ -47,7 +47,7 @@ export function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-[#0F766E] ${
+                className={`text-sm font-medium transition-colors hover:text-[#2563EB] ${
                   scrolled ? 'text-gray-700' : 'text-white/90'
                 }`}
               >
@@ -68,7 +68,7 @@ export function Navbar() {
             </a>
             <a
               href="#consultation"
-              className="inline-flex items-center justify-center bg-[#0F766E] hover:bg-[#115E59] text-gray-900 font-semibold rounded-full px-5 py-2 text-sm transition-colors"
+              className="inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-gray-900 font-semibold rounded-full px-5 py-2 text-sm transition-colors"
             >
               Get Free Quote
             </a>
@@ -97,7 +97,7 @@ export function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-gray-700 font-medium py-2 hover:text-[#0F766E] transition-colors"
+                  className="text-gray-700 font-medium py-2 hover:text-[#2563EB] transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
@@ -105,7 +105,7 @@ export function Navbar() {
               ))}
               <a
                 href="#consultation"
-                className="inline-flex items-center justify-center bg-[#0F766E] hover:bg-[#115E59] text-gray-900 font-semibold rounded-full px-5 py-2.5 text-sm transition-colors mt-2"
+                className="inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-gray-900 font-semibold rounded-full px-5 py-2.5 text-sm transition-colors mt-2"
               >
                 Get Free Quote
               </a>
