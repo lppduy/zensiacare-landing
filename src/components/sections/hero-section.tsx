@@ -1,7 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowDown, Play, Shield, Star, Clock, Users } from 'lucide-react'
+import { ArrowDown, Shield, Star, Clock, Users, Send, ChevronDown } from 'lucide-react'
 
 const TRUST_ITEMS = [
   { icon: Users, value: '2,000+', label: 'International Patients Served' },
@@ -9,6 +10,90 @@ const TRUST_ITEMS = [
   { icon: Star, value: '4.9/5', label: 'Google Review Rating' },
   { icon: Clock, value: '24/7', label: 'On-site Medical Support' },
 ]
+
+const TREATMENTS = [
+  'Advanced Dental (Implants / Veneers)',
+  'Cosmetic Surgery',
+  'Fertility & IVF',
+  'Executive Health Check-up',
+  'Other / Not Sure Yet',
+]
+
+// Glassmorphism quote form embedded in hero
+function HeroQuoteForm() {
+  const [submitted, setSubmitted] = useState(false)
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setSubmitted(true)
+  }
+
+  if (submitted) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="max-w-xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-8 py-8 text-center"
+      >
+        <div className="text-4xl mb-3">🎉</div>
+        <h3 className="text-white font-display font-bold text-xl mb-2">Request Received!</h3>
+        <p className="text-white/70 text-sm">Our medical concierge will contact you within 24 hours.</p>
+      </motion.div>
+    )
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-2xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-6 shadow-2xl"
+    >
+      <p className="text-white/80 text-sm font-medium mb-4 text-center">
+        Get your free personalised quote — no commitment required
+      </p>
+
+      <div className="grid sm:grid-cols-2 gap-3 mb-3">
+        {/* Name */}
+        <input
+          type="text"
+          required
+          placeholder="Your full name"
+          className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-[#D4A843] transition-colors"
+        />
+        {/* Email */}
+        <input
+          type="email"
+          required
+          placeholder="Email address"
+          className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-[#D4A843] transition-colors"
+        />
+      </div>
+
+      {/* Treatment select */}
+      <div className="relative mb-4">
+        <select
+          required
+          defaultValue=""
+          className="w-full appearance-none bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#D4A843] transition-colors cursor-pointer"
+        >
+          <option value="" disabled className="bg-[#1E3A5F]">Select treatment of interest</option>
+          {TREATMENTS.map((t) => (
+            <option key={t} value={t} className="bg-[#1E3A5F]">{t}</option>
+          ))}
+        </select>
+        <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none" />
+      </div>
+
+      {/* Submit */}
+      <button
+        type="submit"
+        className="w-full bg-[#D4A843] hover:bg-[#B8922E] text-[#1E3A5F] font-bold rounded-xl py-3.5 text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-lg shadow-[#D4A843]/20"
+      >
+        <Send size={16} />
+        Get My Free Quote
+      </button>
+    </form>
+  )
+}
 
 function FloatingParticle({ x, y, size, delay }: { x: string; y: string; size: number; delay: number }) {
   return (
@@ -75,23 +160,15 @@ export function HeroSection() {
           to wellness with safety, transparency, and 24/7 personalized care.
         </motion.p>
 
-        {/* CTAs */}
+        {/* Free Quote Form */}
         <motion.div
+          id="consultation"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          className="mb-16"
         >
-          <a
-            href="#consultation"
-            className="inline-flex items-center justify-center bg-[#D4A843] hover:bg-[#B8922E] text-[#1E3A5F] font-bold rounded-full px-8 py-4 text-base shadow-lg transition-all duration-300 w-full sm:w-auto"
-          >
-            Get a Free Quote
-          </a>
-          <button className="inline-flex items-center justify-center border border-white/50 text-white bg-transparent hover:bg-white/10 rounded-full px-8 py-4 text-base transition-all duration-300 w-full sm:w-auto gap-2">
-            <Play size={16} className="fill-current" />
-            Watch Our Story
-          </button>
+          <HeroQuoteForm />
         </motion.div>
 
         {/* Trust stats */}
