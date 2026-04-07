@@ -40,13 +40,13 @@ export function HowItWorksSection() {
     <section id="how-it-works" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="text-center mb-16">
-          <span className="text-sm font-semibold text-[#2563EB] uppercase tracking-widest">
+          <span className="text-sm font-semibold text-[#0F766E] uppercase tracking-widest">
             The Journey
           </span>
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mt-3 mb-4">
             How It Works
           </h2>
-          <div className="w-16 h-1 bg-[#2563EB] rounded-full mx-auto" />
+          <div className="w-16 h-1 bg-[#0F766E] rounded-full mx-auto" />
           <p className="text-gray-500 mt-4">
             A seamless 4-step process designed for international travelers.
           </p>
@@ -54,7 +54,7 @@ export function HowItWorksSection() {
 
         <div className="grid md:grid-cols-4 gap-8 relative">
           {/* Dashed connector line */}
-          <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px border-t-2 border-dashed border-[#2563EB]/30 z-0" />
+          <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px border-t-2 border-dashed border-[#0F766E]/30 z-0" />
 
           {STEPS.map(({ number, icon: Icon, title, description }, i) => (
             <motion.div
@@ -65,8 +65,8 @@ export function HowItWorksSection() {
               viewport={{ once: true, margin: '-80px' }}
               className="relative z-10 text-center flex flex-col items-center"
             >
-              <div className="w-20 h-20 bg-[#0F172A] rounded-full flex flex-col items-center justify-center mb-6 shadow-lg border-4 border-white">
-                <span className="text-xs text-[#2563EB] font-bold">{number}</span>
+              <div className="w-20 h-20 bg-[#0F766E] rounded-full flex flex-col items-center justify-center mb-6 shadow-lg border-4 border-white">
+                <span className="text-xs text-[#0F766E] font-bold">{number}</span>
                 <Icon className="text-white mt-0.5" size={20} />
               </div>
               <h3 className="text-lg font-display font-bold text-[#0F172A] mb-3">{title}</h3>

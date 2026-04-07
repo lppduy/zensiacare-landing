@@ -22,16 +22,16 @@ const TESTIMONIALS = [
 
 export function PatientStoriesSection() {
   return (
-    <section id="stories" className="py-20 lg:py-28 bg-gradient-to-br from-[#2563EB]/5 to-[#0F172A]/5">
+    <section id="stories" className="py-20 lg:py-28 bg-gradient-to-br from-[#0F766E]/5 to-[#0F172A]/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="text-center mb-16">
-          <span className="text-sm font-semibold text-[#2563EB] uppercase tracking-widest">
+          <span className="text-sm font-semibold text-[#0F766E] uppercase tracking-widest">
             Testimonials
           </span>
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mt-3 mb-4">
             Patient Stories
           </h2>
-          <div className="w-16 h-1 bg-[#2563EB] rounded-full mx-auto" />
+          <div className="w-16 h-1 bg-[#0F766E] rounded-full mx-auto" />
           <p className="text-gray-500 mt-4">Real experiences from real patients.</p>
         </FadeInUp>
 
@@ -39,13 +39,13 @@ export function PatientStoriesSection() {
           {TESTIMONIALS.map(({ quote, name, location, treatment, initials }) => (
             <StaggerItem key={name}>
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100 flex flex-col h-full">
-                <Quote className="text-[#2563EB]/30 mb-4" size={48} />
+                <Quote className="text-[#0F766E]/30 mb-4" size={48} />
                 <p className="text-[#0F172A]/80 leading-relaxed flex-1 text-base italic mb-6">
                   &ldquo;{quote}&rdquo;
                 </p>
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="text-[#2563EB] fill-[#2563EB]" size={16} />
+                    <Star key={i} className="text-[#0F766E] fill-[#0F766E]" size={16} />
                   ))}
                 </div>
                 <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
@@ -55,7 +55,7 @@ export function PatientStoriesSection() {
                   <div>
                     <div className="font-display font-bold text-[#0F172A]">{name}</div>
                     <div className="text-sm text-gray-500">{location}</div>
-                    <span className="text-xs bg-[#2563EB]/10 text-[#2563EB] px-2 py-0.5 rounded-full mt-1 inline-block">
+                    <span className="text-xs bg-[#0F766E]/10 text-[#0F766E] px-2 py-0.5 rounded-full mt-1 inline-block">
                       {treatment}
                     </span>
                   </div>

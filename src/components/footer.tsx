@@ -46,13 +46,13 @@ const SOCIAL_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#0F172A] text-white">
+    <footer className="bg-[#0C2340] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="text-2xl font-display font-extrabold mb-3">
-              Zensia<span className="text-[#2563EB]">Care</span>
+              Zensia<span className="text-[#0F766E]">Care</span>
             </div>
             <p className="text-white/50 text-sm mb-6">Your Health, Our Mission.</p>
             <div className="flex gap-3">
@@ -60,7 +60,7 @@ export function Footer() {
                 <a
                   key={label}
                   href="#"
-                  className="w-9 h-9 bg-white/10 hover:bg-[#2563EB]/20 rounded-full flex items-center justify-center transition-colors"
+                  className="w-9 h-9 bg-white/10 hover:bg-[#0F766E]/20 rounded-full flex items-center justify-center transition-colors"
                   aria-label={label}
                 >
                   {svg}
@@ -75,7 +75,7 @@ export function Footer() {
             <ul className="space-y-2">
               {QUICK_LINKS.map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-white/50 hover:text-[#2563EB] text-sm transition-colors">
+                  <a href="#" className="text-white/50 hover:text-[#0F766E] text-sm transition-colors">
                     {link}
                   </a>
                 </li>
@@ -88,15 +88,15 @@ export function Footer() {
             <h4 className="font-display font-bold mb-4 text-white/90">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-[#2563EB] flex-shrink-0 mt-0.5" />
+                <MapPin size={16} className="text-[#0F766E] flex-shrink-0 mt-0.5" />
                 <span className="text-white/50 text-sm">Ho Chi Minh City / Hanoi, Vietnam</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={16} className="text-[#2563EB] flex-shrink-0" />
+                <Phone size={16} className="text-[#0F766E] flex-shrink-0" />
                 <span className="text-white/50 text-sm">+84 [Your Number]</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={16} className="text-[#2563EB] flex-shrink-0" />
+                <Mail size={16} className="text-[#0F766E] flex-shrink-0" />
                 <span className="text-white/50 text-sm">support@zensiacare.com</span>
               </li>
             </ul>
@@ -119,9 +119,9 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#2563EB] transition-colors"
+                className="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#0F766E] transition-colors"
               />
-              <button className="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-[#0F172A] font-semibold rounded-lg px-3 py-2 text-sm transition-colors">
+              <button className="w-full bg-[#0F766E] hover:bg-[#115E59] text-white font-semibold rounded-lg px-3 py-2 text-sm transition-colors">
                 Subscribe
               </button>
             </div>
