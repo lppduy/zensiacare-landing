@@ -62,7 +62,7 @@ export function Navbar() {
             </a>
             <a
               href="#consultation"
-              className="inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-gray-900 font-semibold rounded-full px-5 py-2 text-sm transition-colors"
+              className="inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold rounded-full px-5 py-2 text-sm transition-colors"
             >
               Get Free Quote
             </a>
