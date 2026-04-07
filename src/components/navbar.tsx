@@ -26,18 +26,14 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md ${
+        scrolled ? 'shadow-sm border-b border-gray-100' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-2">
-            <span
-              className={`text-xl font-display font-extrabold transition-colors ${
-                scrolled ? 'text-gray-900' : 'text-white'
-              }`}
-            >
+            <span className="text-xl font-display font-extrabold text-gray-900">
               Zensia<span className="text-[#2563EB]">Care</span>
             </span>
           </a>
@@ -47,9 +43,7 @@ export function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-[#2563EB] ${
-                  scrolled ? 'text-gray-700' : 'text-white/90'
-                }`}
+                className="text-sm font-medium text-gray-600 hover:text-[#2563EB] transition-colors"
               >
                 {link.label}
               </a>
